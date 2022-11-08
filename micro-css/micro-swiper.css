@@ -1,0 +1,213 @@
+/* add */
+html {
+  --swiper-them-color: black!important;
+}
+
+.swiper-wrapper {
+  margin-bottom: 50px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 1084px) {
+.swiper-slide img.girl{
+  display: block;
+  width: 91%;
+  height: 91%;
+  margin: auto;
+  /* object-fit: cover; */
+}
+}
+/* add */
+.swiper-button-next, .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  top: 96.5%;
+  opacity: 1!important;
+}
+
+.swiper-button-next {
+  right: 50%;
+  transform: translateX(150%);
+}
+.swiper-button-prev {
+  left: 50%;
+  transform: translateX(-150%);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black;
+}
+
+.my-swiper-slide {
+  position: relative;
+}
+
+.main-text{
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  font-size: 16px;
+  text-align: left;
+}
+/* .my-swiper-slide {
+  display: flex;
+  flex-direction: column;
+} */
+
+.main-text-1{
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  font-size: 16px;
+  text-align: left;
+}
+
+.banner-title {
+  font-weight: 600;
+  max-height: 40px;
+  font-size: 2.3125rem;
+  margin-top: 20px;
+}
+
+.banner-paragraph {
+  width: 400px;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.banner-to-action {
+  background-color: #0067b8;
+  width: 90px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.banner-to-action {
+  color: white!important;  
+}
+
+.banner-girl-title {
+  font-weight: 600;
+  max-height: 40px;
+  font-size: 2.3125rem;
+  margin-top: 0;
+}
+
+.main-text-girl{
+  position: absolute;
+  top: 30%;
+  left: 12%;
+  font-size: 16px;
+  text-align: left;
+}
+
+.banner-girl-paragraph {
+  width: 430px;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1083px) {
+  .my-swiper-slide {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-text {
+    position: initial;
+    /* 或是 */
+    /* position: static; */
+    width: 98%;
+    height: 245px;
+    padding: 30px;
+    margin-top: -5%;
+    background-color: white;
+    box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 11%), 0 0.1875rem 0.4375rem rgb(0 0 0 / 13%);
+  }
+
+  .main-text-1 {
+    position: initial;
+    /* 或是 */
+    /* position: static; */
+    width: 98%;
+    height: 295px;
+    padding: 30px;
+    margin-top: -5%;
+    background-color: white;
+    box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 11%), 0 0.1875rem 0.4375rem rgb(0 0 0 / 13%);
+  }
+
+  .banner-paragraph {
+    width: 100%;
+  }
+
+  .banner-girl-paragraph {
+    width: 100%;
+  }
+}
+
+@media (max-width: 859px) {
+  .main-text {
+    position: initial;
+    /* 或是 */
+    /* position: static; */
+    width: 100%;
+    height: 245px;
+    padding: 30px;
+    margin-top: -5%;
+    background-color: white;
+  }
+}

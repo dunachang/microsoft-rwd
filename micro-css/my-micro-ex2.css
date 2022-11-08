@@ -1,0 +1,586 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", 微軟正黑體, Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.container-normal,
+.container-full {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 0%;
+}
+
+/* .container-normal {
+  background-color: lightgray;
+}
+
+.container-full {
+  background-color: grey;
+} */
+
+@media (max-width: 1800px) {
+  .container-normal {
+    padding: 0 5%;
+  }
+}
+
+nav.container-normal {
+  width: 100%;
+  height: 54px;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 108px;
+  /* height: 23px; */
+}
+
+@media (max-width: 859px) {
+  nav {
+    position: relative;
+  }
+
+  .logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.pc-menu,
+.func-menu {
+  list-style: none;
+  display: flex;
+}
+
+.pc-menu {
+  width: 1120px;
+  /* background-color: bisque; */
+}
+
+/* .pc-menu li, .func-menu li{
+  display: inline-block;
+  padding-bottom: 1px;
+  border-bottom: 2px solid white;
+} */
+
+.pc-menu li {
+  margin-right: 20px;
+}
+
+.pc-menu li a {
+  display: flex;
+  align-items: center;
+}
+
+.icon-more {
+  width: 10px;
+  /* height:20px; */
+  margin-top: 10px;
+}
+
+.pc-menu li:nth-last-of-type(1) {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .pc-menu li {
+    margin-right: 15px;
+  }
+}
+
+.pc-menu li:hover,
+.func-menu li .underline-text:hover {
+  border-bottom: 2px solid black;
+  padding-bottom: 1px;
+}
+
+@media (max-width: 875px) {
+
+  .pc-menu li:nth-last-of-type(2),
+  .pc-menu li:nth-last-of-type(3) {
+    display: none;
+  }
+
+  .pc-menu li:nth-last-of-type(1) {
+    display: block;
+  }
+}
+
+@media (max-width: 859px) {
+  .pc-menu {
+    display: none;
+  }
+}
+
+.func-menu {
+  max-width: 370px;
+  width: 100%;
+  height: 30px;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  /* background-color: aquamarine; */
+  word-break: keep-all;
+}
+
+.ham-small {
+  display: none;
+}
+
+@media (max-width: 1399px) {
+  .func-menu .menu-text {
+    display: none;
+  }
+}
+
+@media (max-width: 859px) {
+  .func-menu {
+    max-width: 100%;
+  }
+
+  .ham-small {
+    display: block;
+  }
+
+  .searh-something {
+    margin-right: auto;
+  }
+}
+
+.func-menu li {
+  margin-left: 14px;
+}
+
+.func-menu li a {
+  display: flex;
+  align-items: center;
+}
+
+.icon-all-microsoft {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url(../micro-img/nav-img/chevron-down.svg);
+}
+
+.all-microsoft {
+  display: block;
+}
+
+nav .microsoft-menu {
+  background-color: #f2f2f2;
+  width: 90%;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  top: 54px;
+  left: 0;
+  z-index: 999;
+  border-bottom: 1px solid black;
+  margin: auto;
+  padding: 0 30px;
+  border: 1px solid #e6e6e6;;
+}
+
+nav .microsoft-menu-map {
+  width: 100vw;
+  height: 40px;
+  margin: 0 -30px;
+  text-align: center;
+  line-height: 40px;
+  align-items: center;
+  background-color: rgb(228, 228, 228);
+}
+
+nav .microsoft-menu {
+  display: none;
+}
+
+#ham-menu-microsoft:checked~.microsoft-menu {
+  display: flex;
+  /* 有利用到 flex 的屬性功能 必須改成 display: flex; */
+  /* display: flex;
+  position: absolute;
+  top: 100px;
+  left: 5%;
+  width: 80px;
+  background-color: lightgrey;
+  padding: 5px; */
+}
+
+nav .microsoft-menu ul p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+nav .microsoft-menu ul li {
+  font-size: 12px;
+  padding-bottom: 20px;
+  margin-left: -0px;
+}
+
+nav .mobile-menu li {
+  padding: 15px 30px;
+  font-size: 16px;
+}
+
+/* .ham-menu-big {
+  width: 90%;
+  height: 400px;
+} */
+
+.icon-search {
+  width: 16px;
+  /* height: 16px; */
+  margin-left: 5px;
+}
+
+.icon-login {
+  width: 32px;
+  margin-left: 10px;
+}
+
+.ham-menu {
+  /* 很重要 */
+  display: block;
+  width: 32px;
+  height: 28px;
+  background-image: url(../micro-img/nav-img/rwd-1.png);
+}
+
+nav .mobile-menu {
+  display: none;
+}
+
+@media (max-width: 859px) {
+  .all-microsoft {
+    display: none;
+  }
+
+  #ham-menu-switch:checked+.ham-menu {
+    background-image: url(../micro-img/nav-img/rwd-x.png);
+  }
+
+  #ham-menu-switch:checked~.mobile-menu {
+    display: block;
+    /* 有利用到 flex 的屬性功能 必須改成 display: flex; */
+    /* display: flex;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    width: 80px;
+    background-color: lightgrey;
+    padding: 5px; */
+  }
+
+  nav .mobile-menu {
+    background-color: #f2f2f2;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    z-index: 999;
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav .underline-text {
+    display: none;
+  }
+
+  nav .mobile-menu li {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+
+  .mobile-menu li:hover {
+    border-bottom: none;
+    padding-bottom: 15px;
+    border: 1px solid #e6e6e6;
+  }
+
+  .mobile-menu li:focus {
+    border: 1px dashed black;
+  }
+
+  nav .mobile-menu .sub-dropdown-menu{
+    width: 100%;
+    display: none;
+  }
+
+  nav .mobile-menu li  i{
+    float: right;
+  }
+  /* 以下方法也可以，同上 */
+  /* nav .mobile-menu li  i{
+    display: flex;
+    justify-content: space-between;
+  } */
+
+  /* 第二個符號消失 */
+  nav .mobile-menu li i:nth-of-type(2) {
+    display: none;
+  }
+
+  /* 點一下第二個符號出現 */
+  .chevron-switch:nth-of-type(n):checked + label .sub-dropdown-menu:nth-of-type(n),
+  .chevron-switch:nth-of-type(n):checked + label li i:nth-of-type(2) {
+    /* background-color: #FFBF00; */
+    display: block;
+  }
+
+  /* 第一個符號消失 */
+  .chevron-switch:checked + label li i:nth-of-type(1) {
+    display: none;
+  }
+
+  /* nav .mobile-menu li .sub-dropdown-menu ul{
+    
+  } */
+}
+
+/* section 1 選擇... */
+section.container-all-choice {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice-area-x {
+  text-align: center;
+  width: 180px;
+  height: 130px;
+  margin-left: 5px;
+}
+
+section.container-all-choice .choice-area-x div {
+  color: #0067B8;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+section.container-all-choice .choice-area-x div:focus {
+  border: 1px dashed #0067B8;
+}
+
+/* section 2 四張卡片 */
+section.container-four-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+section.container-four-card .paragraph-card {
+  font-size: 16px;
+}
+
+section .main-card {
+  width: calc((100% - 75px)/4);
+}
+
+section.container-four-card .main-card img {
+  width: 100%;
+  margin-top: 15px;
+}
+
+section.container-four-card h2.big-title {
+  width: 100vw;
+  font-size: 2.0125rem;
+}
+
+section.container-four-card .title {
+  font-size: 1.5rem;
+}
+
+.bluebotton {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  color: #0067B8!important;
+  font-weight: bold;
+}
+
+.bluebotton:hover {
+  text-decoration: 2px underline #0067B8;
+}
+
+.bluebotton:focus {
+  border: 1px dashed #0067B8;
+}
+
+.new {
+  width: 70px;
+  height: 35px;
+  background-color:	#FFBF00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 1083px) {
+  section.container-four-card {
+    flex-wrap: wrap;
+  }
+
+  section .main-card {
+    width: calc((100% - 25px)/2);
+  }
+}
+
+@media (max-width: 539px) {
+  section .main-card {
+    width: 100%;
+  }
+
+}
+
+/* 頁尾 */
+footer {
+  background-color: #f2f2f2;
+}
+
+footer .footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 50px;
+}
+
+footer .footer-menu ul {
+  font-size: 12px;
+  color: #696969;
+  padding: 0;
+}
+
+footer .footer-menu ul p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+footer .footer-menu ul li {
+  padding-bottom: 10px;
+}
+
+footer .footer-nav {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  color: #696969;
+}
+
+footer .footer-nav .footer-earth img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+footer .footer-nav .footer-earth {
+  padding: 10px 0;
+  color: #696969;
+}
+
+footer .footer-nav .footer-nav-menu {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: khaki; */
+}
+
+footer .footer-nav .footer-nav-menu ul {
+  padding: 0 10px;
+}
+
+@media (max-width: 1083px) {
+  footer .footer-menu {
+    padding: 0 15px;
+  }
+
+  footer .footer-menu ul {
+    width: 33%;
+    padding-left: 30px;
+  }
+
+  footer .footer-nav {
+    padding: 0 43px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .footer-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .footer-nav .footer-nav-menu {
+    padding: 0;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 539px) {
+  footer .footer-menu ul {
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  footer .footer-nav {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 511px) {
+  footer .footer-nav .footer-nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+}
